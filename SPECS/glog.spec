@@ -1,6 +1,6 @@
 Name:           glog
 Version:        0.3.5
-Release:        3%{?dist}
+Release:        6%{?dist}
 Summary:        A C++ application logging library
 Group:          System Environment/Libraries
 License:        BSD
@@ -60,6 +60,19 @@ rm -rf $RPM_BUILD_ROOT/%{_docdir}/%{name}-%{version}
 
 
 %changelog
+* Thu Aug 10 2023 Jiri Kucera <jkucera@redhat.com> - 0.3.5-6
+- Rebuild to correct the binary content
+  (rhel8 and c8s binary RPMs differs in libgflags SONAME)
+  Related: #2035143
+
+* Thu Feb 24 2022 Jiri Kucera <jkucera@redhat.com> - 0.3.5-5
+- Rebuild due to revert of gflags back to 2.1.2
+  Related: #2035143
+
+* Fri Feb 11 2022 Jiri Kucera <jkucera@redhat.com> - 0.3.5-4
+- Rebuild for gflags 2.2.2
+  Related: #2035143
+
 * Wed Feb 07 2018 Fedora Release Engineering <releng@fedoraproject.org> - 0.3.5-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
 
